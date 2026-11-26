@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1b1210">
+  <meta name="description" content="Install the Dã́ngme Keyboard on iPhone or iPad for free with Sideloadly or AltStore.">
+  <title>Install Dã́ngme Keyboard — iPhone / iPad</title>
+  <style>
+    :root {
+      --bg: #1b1210;
+      --surface: #2a1c18;
+      --surface-2: #382620;
+      --line: rgba(255, 236, 214, 0.14);
+      --text: #fff5ea;
+      --muted: #d8c3b3;
+      --clay: #d98a5b;
+      --clay-dark: #a8532e;
+      --gold: #f2c879;
+      --green: #77c79a;
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--text);
+      background:
+        radial-gradient(900px 520px at 85% -8%, rgba(217, 138, 91, 0.28), transparent 62%),
+        radial-gradient(720px 460px at -10% 18%, rgba(242, 200, 121, 0.14), transparent 58%),
+        var(--bg);
+      font: 16px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: env(safe-area-inset-top) 16px calc(env(safe-area-inset-bottom) + 40px);
+    }
+
+    .wrap { max-width: 720px; margin: 0 auto; }
+
+    header { text-align: center; padding: 34px 0 22px; }
+
+    .shell {
+      width: 78px;
+      height: 78px;
+      margin: 0 auto 16px;
+      display: grid;
+      place-items: center;
+      font-size: 42px;
+      line-height: 1;
+      border-radius: 26px;
+      background: linear-gradient(145deg, var(--gold), var(--clay) 55%, var(--clay-dark));
+      box-shadow: 0 14px 40px rgba(217, 138, 91, 0.28), inset 0 1px 0 rgba(255,255,255,.45);
+    }
+
+    h1 { margin: 0; font-size: clamp(26px, 7vw, 38px); line-height: 1.15; letter-spacing: -0.02em; }
+
+    .sub { margin: 10px auto 0; max-width: 520px; color: var(--muted); font-size: 15px; }
+
+    .badge-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+    .badge {
+      padding: 6px 11px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.04);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--surface), #241713);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.25);
+      margin-bottom: 16px;
+    }
+
+    .download-card { text-align: center; border-color: rgba(217,138,91,.42); }
+
+    .download-card h2 { margin: 0 0 6px; font-size: 20px; }
+
+    .download-card p { margin: 0 0 18px; color: var(--muted); font-size: 14px; }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      width: 100%;
+      max-width: 420px;
+      min-height: 60px;
+      padding: 14px 22px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, var(--clay), var(--clay-dark));
+      color: #fff;
+      font-size: 18px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(168, 83, 46, .38), inset 0 1px 0 rgba(255,255,255,.28);
+      transition: transform .15s ease, filter .15s ease;
+    }
+
+    .button:active { transform: translateY(1px) scale(.99); filter: brightness(1.08); }
+
+    .button small { display: block; font-size: 12px; font-weight: 600; opacity: .86; }
+
+    .button-text { text-align: left; }
+
+    .note {
+      margin-top: 16px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: rgba(242, 200, 121, .09);
+      border: 1px solid rgba(242, 200, 121, .24);
+      color: #f7dfb2;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    h2.section { margin: 0 0 14px; font-size: 19px; }
+
+    ol { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+
+    li.step {
+      counter-increment: step;
+      position: relative;
+      padding: 0 0 20px 46px;
+    }
+
+    li.step:last-child { padding-bottom: 0; }
+
+    li.step::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    li.step + li.step::after {
+      content: "";
+      position: absolute;
+      left: 15px;
+      top: 36px;
+      bottom: 4px;
+      width: 1px;
+      background: var(--line);
+    }
+
+    strong { color: #fff; }
+
+    .step-title { font-weight: 700; }
+
+    .step-detail { color: var(--muted); font-size: 14px; margin-top: 2px; }
+
+    a.inline { color: var(--gold); text-decoration: underline; text-underline-offset: 2px; }
+
+    code {
+      font: 12px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #f7dfb2;
+      background: rgba(0,0,0,.28);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1px 5px;
+      overflow-wrap: anywhere;
+    }
+
+    details { margin-top: 4px; }
+
+    summary { cursor: pointer; color: var(--muted); font-size: 14px; }
+
+    .hash { display: block; margin-top: 10px; font-size: 11px; }
+
+    .features { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+
+    .features li { color: var(--muted); font-size: 14px; padding-left: 20px; position: relative; }
+
+    .features li::before { content: "✓"; position: absolute; left: 0; color: var(--green); font-weight: 800; }
+
+    footer { text-align: center; color: #a89284; font-size: 12px; padding: 10px 0 0; }
+
+    @media (min-width: 560px) {
+      body { padding-top: 48px; }
+      .card { padding: 26px 30px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <div class="shell" aria-hidden="true">🐚</div>
+      <h1>Dã́ngme Keyboard<br>for iPhone &amp; iPad</h1>
+      <p class="sub">Type Dã́ngme with tone marks, suggestions, emoji and the same themes as the Android keyboard.</p>
+      <div class="badge-row">
+        <span class="badge">v1.4 · build 5</span>
+        <span class="badge">~5 MB</span>
+        <span class="badge">Free</span>
+        <span class="badge">iPhone / iPad</span>
+      </div>
+    </header>
+
+    <section class="card download-card">
+      <h2>Step 1 — Download the app</h2>
+      <p>Save the file to your phone, or open this page on a computer and keep the file handy.</p>
+      <a class="button" href="DangmeKeyboard-unsigned.ipa" download="DangmeKeyboard-unsigned.ipa">
+        <span class="button-text">
+          ⬇︎ Download Dã́ngme Keyboard
+          <small>iOS v1.4 · unsigned IPA</small>
+        </span>
+      </a>
+      <div class="note">
+        <strong>No account, no sign-up, no payment.</strong> Just tap Download. Apple does not allow one-tap
+        installation of apps outside the App Store, so a free Apple ID and a computer are needed for about 2 minutes —
+        after that the keyboard works normally.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">Steps 2–5 — Install it</h2>
+      <ol>
+        <li class="step">
+          <div class="step-title">Install a free signer on your computer</div>
+          <div class="step-detail">Use <a class="inline" href="https://sideloadly.io" target="_blank" rel="noopener">Sideloadly</a> (Windows/Mac) or <a class="inline" href="https://altstore.io" target="_blank" rel="noopener">AltStore</a>. Connect your iPhone/iPad with a USB cable.</div>
+        </li>
+        <li class="step">
+          <div class="step-title">Sideload the IPA</div>
+          <div class="step-detail">Open the signer, drag <code>DangmeKeyboard-unsigned.ipa</code> into it, sign in with your Apple ID, then press <strong>Start</strong>. When asked for a password, use an <strong>app-specific password</strong> from <code>appleid.apple.com</code>.</div>
+        </li>
+        <li class="step">
+          <div class="step-title">Trust the certificate on your device</div>
+          <div class="step-detail">Go to <strong>Settings → General → VPN &amp; Device Management</strong>, tap your Apple ID, then <strong>Trust</strong>.</div>
+        </li>
+        <li class="step">
+          <div class="step-title">Add the keyboard</div>
+          <div class="step-detail">Go to <strong>Settings → General → Keyboard → Keyboards → Add New Keyboard…</strong> and select <strong>Dã́ngme Keyboard</strong>. Open any app, tap a text field and hold the 🌐 key to switch to it.</div>
+        </li>
+      </ol>
+      <div class="note">
+        ⏳ With a free Apple ID the signature expires after <strong>7 days</strong>. Reconnect the device and press Start
+        again in Sideloadly/AltStore to renew — your keyboard and settings stay installed.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section">What you get</h2>
+      <ul class="features">
+        <li>QWERTY with ɛ and ɔ always visible</li>
+        <li>Long-press any of the 7 vowels for tone variations</li>
+        <li>Dã́ngme ⇄ English suggestions with meanings</li>
+        <li>?123 symbol page and a full emoji page</li>
+        <li>System, Light, Dark, Kente, Ocean, Rose &amp; custom themes, photo/transparent background and opacity</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="section">Verify the download</h2>
+      <p class="step-detail">The file is unsigned by design — that is what your computer signs. Checksum:</p>
+      <details>
+        <summary>Show SHA-256</summary>
+        <code class="hash">B8F62BD710496E5133BFC7E20FE5000074DB0B4132CFB3CB225A23971AD5C1F8</code>
+      </details>
+    </section>
+
+    <footer>Sideloading is free but not officially supported by Apple. No account or payment is needed here.</footer>
+  </main>
+</body>
+</html>
